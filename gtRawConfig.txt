@@ -1,0 +1,7 @@
+# config file used by gtTsRaw.java
+#
+# path + file name to the mjf file
+totalstationLogFile=17012020.mjf
+#
+# prism constant in meters
+prismConstant=-0.035
