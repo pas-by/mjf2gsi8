@@ -56,7 +56,8 @@ public class gtTsRaw{
             //  loop for each occupied station
             for(int index=0; index<occupiedStations.size(); index++){
             	setupHeader occupiedStation = occupiedStations.get(index);
-                outputString += occupiedStation + System.lineSeparator();
+                outputString += "41" + (gsi8_util.getPtIDWord(blockNum, "1")).substring(2);
+                outputString += (occupiedStation.toString()).substring(15) + System.lineSeparator();
                 blockNum++;
 
                 pstmt.setInt(1, occupiedStation.getSetupIndex());
