@@ -4,11 +4,18 @@ public class setupHeader implements Cloneable{
     protected int index;
     protected String StationName;
     protected double instrumentHeight;
+    protected int blockNum = 1;
 
+    //  constructor
     public setupHeader(int i, String name, double hi){
         index = i;
         StationName = new String(name);
         instrumentHeight =  hi;
+    }
+
+    public void setBlockNumber(int b){
+        if(b<1000)
+            blockNum = b;
     }
 
     public int getSetupIndex(){
@@ -25,7 +32,7 @@ public class setupHeader implements Cloneable{
 
     public String toString(){
         //  generate Station header in GSI8 format
-        String sResult = "410001+00000001 42....";
+        String sResult = "41" + (gsi8_util.getPtIDWord(blockNum, "1")).substring(2) + " 42....";
         sResult += (gsi8_util.getPtIDWord(1, StationName)).substring(6);
         sResult += " 43..1";
         sResult += (gsi8_util.getDataWord('0', instrumentHeight)).substring(5);
