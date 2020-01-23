@@ -1,6 +1,8 @@
+import java.io.Serializable;
+
 //  setupHeader.java
 
-public class setupHeader implements Cloneable{
+public class setupHeader implements Cloneable, Serializable{
     protected int index;
     protected String StationName;
     protected double instrumentHeight;
@@ -14,7 +16,7 @@ public class setupHeader implements Cloneable{
     }
 
     public void setBlockNumber(int b){
-        if(b<1000)
+        if(b<10000)
             blockNum = b;
     }
 
