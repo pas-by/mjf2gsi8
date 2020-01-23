@@ -87,7 +87,11 @@ public class gtTsRaw{
                 	outputString += System.lineSeparator();
                 }
 
-            }
+            }  //  end of for loop
+
+            rs.close();
+            pstmt.close();
+
         }catch(Exception e){
             System.out.println(e);
         }
