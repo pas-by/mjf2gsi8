@@ -1,7 +1,7 @@
 # mjf2gsi8
 extract Topcon GT-1001 total station RAW data, then output to GSI8 format
 
-Since the 'built-in' export to GSI8 function do not associate with its 'point code',
+Since the 'built-in' export to GSI8 function do not associate with those 'point code',
 we wrote the program to cater for it.
 
 # usage
